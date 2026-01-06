@@ -105,3 +105,55 @@ export async function GET() {
     );
   }
 }
+
+// DELETE: Delete an RSVP by ID (admin only)
+export async function DELETE(request: NextRequest) {
+  try {
+    // Check if user is authenticated
+    const supabase = await createServerSupabaseClient();
+    const { data: { user }, error: authError } = await supabase.auth.getUser();
+
+    if (authError || !user) {
+      return NextResponse.json<ApiResponse>(
+        { success: false, error: 'Unauthorized' },
+        { status: 401 }
+      );
+    }
+
+    // Get the RSVP ID from the request body
+    const { id } = await request.json();
+
+    if (!id) {
+      return NextResponse.json<ApiResponse>(
+        { success: false, error: 'RSVP ID is required' },
+        { status: 400 }
+      );
+    }
+
+    // Use admin client to delete (bypasses RLS)
+    const adminClient = createAdminClient();
+    const { error } = await adminClient
+      .from('rsvps')
+      .delete()
+      .eq('id', id);
+
+    if (error) {
+      console.error('Supabase error:', error);
+      return NextResponse.json<ApiResponse>(
+        { success: false, error: 'Failed to delete RSVP' },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json<ApiResponse>(
+      { success: true },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error('API error:', error);
+    return NextResponse.json<ApiResponse>(
+      { success: false, error: 'Internal server error' },
+      { status: 500 }
+    );
+  }
+}
