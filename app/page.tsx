@@ -70,58 +70,128 @@ export default function HomePage() {
 
       {/* Content Section */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 py-12 md:py-16 -mt-16">
-        {/* Event Details */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {/* Date & Time */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-            <div className="w-14 h-14 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg
-                className="w-7 h-7 text-rose-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
+        {/* Wedding Ceremony Section */}
+        <div className="mb-8">
+          <h3 className="text-2xl font-serif text-rose-800 text-center mb-6">
+            💒 Wedding Ceremony
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Date & Time */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+              <div className="w-14 h-14 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-7 h-7 text-rose-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Date & Time</h3>
+              <p className="text-2xl font-serif text-rose-700 mb-1">
+                Friday, February 20, 2026
+              </p>
+              <p className="text-gray-600">8:00 AM - 12:30 PM</p>
             </div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">Date & Time</h3>
-            <p className="text-2xl font-serif text-rose-700 mb-1">
-              Friday, February 20, 2026
-            </p>
-            <p className="text-gray-600">8:00 AM - 12:30 PM</p>
-          </div>
 
-          {/* Venue */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-            <div className="w-14 h-14 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg
-                className="w-7 h-7 text-rose-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
+            {/* Venue */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+              <div className="w-14 h-14 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-7 h-7 text-rose-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Venue</h3>
+              <p className="text-2xl font-serif text-rose-700 mb-1">NCSC</p>
+              <p className="text-gray-600">Shree Pashupatinath Temple & Bouddha Vihar</p>
             </div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">Venue</h3>
-            <p className="text-2xl font-serif text-rose-700 mb-1">NCSC</p>
-            <p className="text-gray-600">Shree Pashupatinath Temple & Bouddha Vihar</p>
+          </div>
+        </div>
+
+        {/* Reception Section */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-serif text-rose-800 text-center mb-6">
+            🎉 Reception Party
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Reception Date & Time */}
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 backdrop-blur-sm rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow border border-amber-100">
+              <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-7 h-7 text-amber-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Date & Time</h3>
+              <p className="text-2xl font-serif text-amber-700 mb-1">
+                Friday, February 20, 2026
+              </p>
+              <p className="text-gray-600">5:00 PM Onwards</p>
+            </div>
+
+            {/* Reception Venue */}
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 backdrop-blur-sm rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow border border-amber-100">
+              <div className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-7 h-7 text-amber-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Venue</h3>
+              <p className="text-2xl font-serif text-amber-700 mb-1">MP Venue Event Center</p>
+              <p className="text-gray-600">817 W Pipeline Rd, Hurst, TX 76053</p>
+              <a
+                href="https://maps.google.com/?q=817+W+Pipeline+Rd,+Hurst,+TX+76053"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-amber-600 hover:text-amber-700 text-sm mt-2 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                Get Directions
+              </a>
+            </div>
           </div>
         </div>
 
@@ -147,7 +217,7 @@ export default function HomePage() {
           <h3 className="text-2xl font-serif text-rose-800 text-center mb-6">
             Order of Events
           </h3>
-          <div className="grid sm:grid-cols-3 gap-6 text-center">
+          <div className="grid sm:grid-cols-4 gap-6 text-center">
             <div className="space-y-2">
               <div className="text-3xl">🙏</div>
               <p className="font-semibold text-gray-800">8:00 AM</p>
@@ -160,8 +230,13 @@ export default function HomePage() {
             </div>
             <div className="space-y-2">
               <div className="text-3xl">🍽️</div>
-              <p className="font-semibold text-gray-800">11:30 AM</p>
-              <p className="text-gray-600">Feast & Celebration</p>
+              <p className="font-semibold text-gray-800">12:00 PM</p>
+              <p className="text-gray-600">Lunch & Farewell</p>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl">🎉</div>
+              <p className="font-semibold text-gray-800">5:00 PM</p>
+              <p className="text-gray-600">Reception Party</p>
             </div>
           </div>
         </div>
@@ -186,7 +261,7 @@ export default function HomePage() {
       </div>
 
       {/* Developer Credit Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-6 mt-auto">
+      {/* <footer className="bg-gray-900 text-gray-400 py-6 mt-auto">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-sm">
             Developed by <span className="text-white font-medium">Anup</span>
@@ -205,7 +280,7 @@ export default function HomePage() {
             </a>
           </p>
         </div>
-      </footer>
+      </footer> */}
     </main>
   );
 }
